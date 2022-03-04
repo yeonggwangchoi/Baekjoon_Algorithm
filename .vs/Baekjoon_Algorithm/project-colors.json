@@ -1,0 +1,11 @@
+{
+  "Version": 1,
+  "ProjectMap": {
+    "803a5200-49c2-411b-ab55-8918da760adb": {
+      "ProjectGuid": "803a5200-49c2-411b-ab55-8918da760adb",
+      "DisplayName": "Baekjoon_Algorithm",
+      "ColorIndex": 0
+    }
+  },
+  "NextColorIndex": 1
+}
