@@ -62,7 +62,7 @@ int main(void)
 	}
 	if (b[0] - 48 == 0 && b[1] - 48 == 0 && b[2] - 48 == 0)
 	{
-		cout << b;
+		cout << b[2];
 		return 0;
 	}
 	else if (b[0] - 48 == 0 && b[1] - 48 == 0)
