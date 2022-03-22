@@ -5,7 +5,7 @@ int main()
 {
 	cin.tie(NULL);
 	ios::sync_with_stdio(false);
-	int num1, num2, sn1 = 0, sn2 = 0, ew1 = 0, ew2 = 0, sum1 = 0, sum2 = 0;
+	long long num1, num2, sn1 = 0, sn2 = 0, ew1 = 0, ew2 = 0, sum1 = 0, sum2 = 0;
 
 	cin >> num1 >> num2;
 
@@ -36,11 +36,16 @@ int main()
 	{
 		sum1 = ew2 - ew1;
 		sum2 = sn2 - sn1;
+		if (sum1 < 0)
+		{
+			sum1 *= -1;
+		}
+		if (sum2 < 0)
+		{
+			sum2 *= -1;
+		}
 	}
-	if (num1 % 4 > num2 % 4)
-	{
-
-	}
+	
 	cout << sum1 + sum2;
 	
 }

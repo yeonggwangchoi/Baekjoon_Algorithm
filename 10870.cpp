@@ -1,33 +1,24 @@
 #include <iostream>
 using namespace std;
-int a = 0, F=0, n1=0, n2=1;
-void Fn(int* x);
+
+int Fibonacci(int x)
+{
+	if (x == 0)
+		return 0;
+	else if (x == 1)
+		return 1;
+	else
+	{
+		return Fibonacci(x - 1) + Fibonacci(x - 2);
+	}
+
+}
 int main()
 {
-	ios_base::sync_with_stdio(false);
 	cin.tie(NULL);
+	ios::sync_with_stdio(false);
 
 	int n;
 	cin >> n;
-
-	Fn(&n);
-
-	cout << n;
-
-	return 0;
-}
-void Fn(int* x)
-{
-	a++;
-	F = n1 + n2;
-	n1 = n2;
-	n2 = F;
-	if (a == *x-1)
-	{
-		*x = F;
-	}
-	else
-	{
-		Fn(x);
-	}
+	cout << Fibonacci(n);
 }
