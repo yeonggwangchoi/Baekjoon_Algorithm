@@ -9,28 +9,28 @@ int main()
 	{
 		for (int j = 0; j < 2 * n - 1; j++)
 		{
-			if (i > j || i + j > 2 * n - 2)
+			if (i > j)
 			{
 				cout << " ";
 			}
-			else
+			else if(i + j <= 2 * n - 2)
 			{
 				cout << "*";
 			}
 		}
 		cout << "\n";
 	}
-	for (int i = 0; i < n; i++)
+	for (int i = 1; i < n; i++)
 	{
 		for (int j = 0; j < 2 * n - 1; j++)
 		{
-			if (i*2>j)
-			{
-				cout << " ";
-			}
-			else
+			if (( 2 * n - 1)/2 - i <= j&& j - i <= n - 1 )
 			{
 				cout << "*";
+			}
+			else if(j+i <= 2 * n && j-i<n)
+			{
+				cout << " ";
 			}
 		}
 		cout << "\n";
