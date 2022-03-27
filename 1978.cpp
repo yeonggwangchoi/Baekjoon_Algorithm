@@ -1,26 +1,29 @@
 #include <iostream>
+#include <vector>
 using namespace std;
 
 int main()
 {
-	ios_base::sync_with_stdio(false);
-	cin.tie(NULL);
-
-	int N, i;
-
+	int N, a = 0;
 	cin >> N;
-	int* n;
-	n = new int[N];
 
-	for (i = 0; i < N; i++)
+	vector<int> v(100);
+	for (int i = 0; i < N; i++)
 	{
-		cin >> n[i];
-
-		if (n[i] % 1 == 0 && n[i] % n[i] == 0 ||)
+		cin >> v[i];
+		for (int j = 2; j < v[i]; j++)
 		{
-
+			if (j != v[i] && v[i] != 1)
+			{
+				if (v[i] % j == 0)
+				{
+					a++;
+					break;
+				}
+			}
 		}
+		if (v[i] == 1)
+		 a++;
 	}
-
-	return 0;
+	cout << N - a;
 }

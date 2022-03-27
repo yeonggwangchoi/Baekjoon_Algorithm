@@ -9,8 +9,8 @@ int main()
 
 	cin >> A >> B >> V;
 	y = (V - B) / (A - B);
-	x = ((double)V - (double)B) / ((double)A - (double)B) * 10.0;
-	if ((int)x > y * 10)
+	x = ((double)V - (double)B) / ((double)A - (double)B) * 1000000000.0;
+	if ((int)x > y * 1000000000)
 	{
 		X = (V - B) / (A - B) + 1;
 	}
