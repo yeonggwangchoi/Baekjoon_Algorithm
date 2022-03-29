@@ -4,7 +4,7 @@ using namespace std;
 
 int main()
 {
-	cin.tie(NULL);
+	cin.tie(nullptr);
 	ios::sync_with_stdio(false);
 
 	double x1, y1, r1, x2, y2, r2, x, y;
