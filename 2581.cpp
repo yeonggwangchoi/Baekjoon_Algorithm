@@ -1,29 +1,33 @@
 #include <iostream>
 using namespace std;
-
-void Eratos(int n)
-{
-	if (n <= 1) return;
-	bool* PrimeArray = new bool[n + 1];
-	for (int i = 2; i <= n; i++)
-		PrimeArray[i] = true;
-
-		for (int i = 2; i * i <= n; i++)
-		{
-			if (PrimeArray[i])
-				for (int j = i * i; j <= n; j += i)
-					PrimeArray[j] = false;
-		}
-}
-
 int main()
 {
-	int M, N;
-	cin >> M >> N;
+	cin.tie(nullptr);
+	ios::sync_with_stdio(false);
 
-	for (int i = M; i <= N; i++)
+	int M, N, a = 0, min=10000, sum = 0;
+	cin >> N >> M;
+
+	for (int i = N; i <= M; i++)
 	{
-		Eratos(i)
-		
+		for (int j = 2; j < M; j++)
+		{
+			if (i % j != 0)
+			{
+				a = 1;
+			}
+			else if(i % j == 0 && j != 1)
+			{
+				a = 0;
+				break;
+			}
+		}
+		if (a == 1)
+		{
+			if (min > i)
+				min = i;
+			sum += i;
+		}
 	}
+	cout << sum<< '\n' << min;
 }

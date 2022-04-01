@@ -1,22 +1,32 @@
 #include<iostream>
 using namespace std;
 
+void dn(int* x);
 int main()
 {
-	int i, num = 1, a, b, sum;
-
-	for (i = 1; i <= 10; i++)
+	cin.tie(nullptr);
+	ios::sync_with_stdio(false);
+	int n = 3;
+	
+	for (int n = 3; n <= 10000; n++)
 	{
-		a = num / 1;
-		b = num % 1;
-
-		sum = num + a + b;
-		if (sum != i)
-		{
-			cout << i << endl;
-		}
-		num = sum;
+		dn(&n);
+		cout << n << "\n";
 	}
-
-	return 0;
+}
+void dn(int *x)
+{
+	int sum = 0;
+	for (int i = 10; i < 10000; i *= 10)
+	{
+		sum += *x / i;
+		if (*x % i == 0)
+			break;
+	}
+	if (sum != *x + 1)
+	{
+		*x = sum;
+		return;
+	}
+		
 }
