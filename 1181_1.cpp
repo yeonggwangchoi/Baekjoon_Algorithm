@@ -1,36 +1,36 @@
 #include <iostream>
-#include <queue>
+#include <vector>
+#include <algorithm>
 using namespace std;
 
-struct compare {
-	bool operator()(string a, string b) {
-		if (a.length() == b.length())
-			return a < b;
-		else {
-
-		}
+bool compare(string a, string b) {
+	if (a.length() != b.length()) {		//길이가 다를때는 길이가 작은것을 우선순위
+		return a.length() < b.length();
 	}
-};
-
+	else {
+		return a < b;	//길이가 같을때는 사전순
+	}
+}
 int main()
 {
-	string str;
-
 	int N;
-	cin >> N;
+	cin >> N;	//케이스 갯수
 
-	priority_queue<string, vector<string>, greater<string>> pq;
+	vector <string> vec;
 
 	for (int i = 0; i < N; i++)
 	{
+		string str;
 		cin >> str;
-		
-		pq.push(str);
+
+		if (find(vec.begin(), vec.end(), str) == vec.end())//algorithm 헤더 파일에 있는 find 함수를 사용하여 같은 문자가 아닐때면 vector에 저장
+			vec.push_back(str);
 	}
-	
-	while (!pq.empty())
+	sort(vec.begin(), vec.end(), compare);	//algorithm 헤더 파일에 있는 sort 함수를 사용하여 정렬 기준 함수를 기준으로 벡터 시작부터 끝까지 정렬
+
+	for (int i = 0; i < vec.size(); i++)
 	{
-		cout << pq.top() << "\n";
-		pq.pop();
+		cout << vec[i] << "\n";
 	}
 }
+

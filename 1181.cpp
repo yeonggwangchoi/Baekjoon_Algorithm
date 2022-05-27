@@ -2,7 +2,7 @@
 #include <list>
 using namespace std;
 
-bool compare_nocase(const std::string& first, const std::string& second)
+bool compare(const std::string& first, const std::string& second)
 {
 	if (first.length() == second.length())
 	{
@@ -17,20 +17,21 @@ int main(void)
 	list <string> fullstr;
 	int N;
 	size_t max = 0;
-	
+
 	cin >> N;
 	for (int i = 0; i < N; i++)
 	{
-		
+
 		cin >> str1;
-		
+
 		fullstr.push_back(str1);
 	}
-	
-	fullstr.sort(compare_nocase);
-	
+
+	fullstr.sort(compare);
+
 	list<string>::iterator iter;
 	for (iter = fullstr.begin(); iter != fullstr.end(); iter++) {
 		cout << *iter << "\n";
 	}
 }
+

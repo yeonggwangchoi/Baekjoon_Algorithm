@@ -6,22 +6,23 @@ int main(void)
 	cin.tie(NULL);
 	ios::sync_with_stdio(false);
 	
-	unsigned long long int test, *a, *b;
-	cin >> test;
-	a = new unsigned long long int[test];
-	b = new unsigned long long int[test];
-	for (int i = 0; i < test; i++)
+	int testcase, a, b, num=1;
+
+	cin >> testcase;
+
+	for (int i = 0; i < testcase; i++)
 	{
-		cin >> a[i] >> b[i];
-		for (int j = 0; j < b[i]-1; j++)
+		num = 1;
+		cin >> a >> b;
+		for (int j = 0; j < b; j++)
 		{
-			a[i] *= a[i];
+			num = (num*a) % 10;	
 		}
+		if (num == 0)
+			cout<<"10\n";
+		cout << num << "\n";
 	}
-	for (int i = 0; i < test; i++)
-	{
-		cout << a[i] << "\n";
-	}
-	
 	return 0;
 }
+
+
