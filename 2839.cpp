@@ -4,21 +4,39 @@ using namespace std;
 
 int main()
 {
-	int N, a = 0;
+	int N, C=0;
 	cin >> N;
-
-	vector<int> v(100);
-	for (int i = 0; i < N; i++)
+	if (N / 5 != 0)
 	{
-		cin >> v[i];
-		for (int j = 2; j < v[i]; j++)
+		if (N % 3 == 0)
 		{
-			if (v[i] % j != 0)
-			{
-				a++;
-				break;
-			}
+			C += N / 5;
+			N = N % 5;
+		}
+		else
+		{
+			C += N / 5;
+			N = N % 5;
 		}
 	}
-	cout << a;
+	else if (N / 5 == 0)
+	{
+		
+		cout << C << N;
+	}
+	if (N / 3 != 0)
+	{
+		C += N / 3;
+		N = N % 3;
+		cout << C << N;
+	}
+
+	if (N == 0)
+	{
+		cout << C << "\n";
+	}
+	else
+	{
+		cout << "-1\n";
+	}
 }
