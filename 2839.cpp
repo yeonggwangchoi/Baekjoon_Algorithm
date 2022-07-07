@@ -6,37 +6,27 @@ int main()
 {
 	int N, C=0;
 	cin >> N;
-	if (N / 5 != 0)
+	if (N % 5 == 0)
 	{
-		if (N % 3 == 0)
-		{
-			C += N / 5;
-			N = N % 5;
-		}
-		else
-		{
-			C += N / 5;
-			N = N % 5;
-		}
-	}
-	else if (N / 5 == 0)
-	{
-		
-		cout << C << N;
-	}
-	if (N / 3 != 0)
-	{
-		C += N / 3;
-		N = N % 3;
-		cout << C << N;
-	}
-
-	if (N == 0)
-	{
-		cout << C << "\n";
+		cout << N / 5;
 	}
 	else
 	{
-		cout << "-1\n";
+		if (N % 15 == 0)
+		{
+			cout << N / 5 + N / 5 / 3;
+		}
+		else
+		{
+			if (N % 15 % 5 == 0)
+			{
+				cout << N / 15 + N % 15 / 5;
+			}
+			else
+			{
+				cout << N 
+			}
+		}
+		
 	}
 }
