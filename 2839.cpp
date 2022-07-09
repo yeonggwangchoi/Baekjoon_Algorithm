@@ -24,7 +24,7 @@ int main()
 			}
 			else
 			{
-				cout << N 
+				cout << N;
 			}
 		}
 		
