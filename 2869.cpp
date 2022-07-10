@@ -1,25 +1,17 @@
-#include<iostream>
+#include <iostream>
 using namespace std;
 
 int main()
 {
-
-	int A, B, V, y, X;
-	double x = 0.0;
-
-	cin >> A >> B >> V;
-	y = (V - B) / (A - B);
-	x = ((double)V - (double)B) / ((double)A - (double)B) * 1000000000.0;
-	if ((int)x > y * 1000000000)
+	int a, b, v;
+	cin >> a >> b >> v;
+	int X = 0;
+	int i = 0;
+	if ((v - b) % (a - b) == 0)
 	{
-		X = (V - B) / (A - B) + 1;
+		X = (v - b) / (a - b);
 	}
 	else
-	{
-		X = (V - B) / (A - B);
-	}
-
-	cout << X << endl;
-
-	return 0;
+		X = (v - b) / (a - b) + 1;
+	cout << X << "\n";
 }
