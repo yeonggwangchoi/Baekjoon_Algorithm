@@ -8,18 +8,22 @@ int main()
 	int H, W, N;
 	for (int i = 0; i < T; i++) {
 		cin >> H >> W >> N;
-		int j, k;
-		for (j = 1;; j++) {
-			if (N - 6 * j < 1)
-			{
-				break;
-			}
-		}
-		for (k = 0; j < H; k++)
+
+		if (N / H > 9 )
 		{
-			if (k - (N - 6 * j) == 0)
-				break;
+			cout << H << N / H << "\n";
 		}
-		cout << i << "0" << k;
+		else if( N % H == 0)
+		{
+			cout << H << '0' << N / H << "\n";
+		}
+		else if(N/H+1>9)
+		{
+			cout << N % H << N / H + 1<<"\n";
+		}
+		else
+		{
+			cout << N % H << '0' << N / H + 1 << "\n";
+		}
 	}
 }
