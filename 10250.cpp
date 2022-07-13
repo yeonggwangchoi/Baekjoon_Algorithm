@@ -6,24 +6,24 @@ int main()
 	int T;
 	cin >> T;
 	int H, W, N;
+	int num1, num2;
 	for (int i = 0; i < T; i++) {
 		cin >> H >> W >> N;
 
-		if (N / H > 9 )
+		if (N % H == 0)
 		{
-			cout << H << N / H << "\n";
-		}
-		else if( N % H == 0)
-		{
-			cout << H << '0' << N / H << "\n";
-		}
-		else if(N/H+1>9)
-		{
-			cout << N % H << N / H + 1<<"\n";
+			num1 = H;
+			num2 = N / H;
 		}
 		else
 		{
-			cout << N % H << '0' << N / H + 1 << "\n";
+			num1 = N % H;
+			num2 = N / H + 1;
 		}
+
+		if (num2 > 9)
+			cout << num1 << num2 << "\n";
+		else
+			cout << num1 << "0" << num2 << "\n";
 	}
 }

@@ -1,12 +1,12 @@
 #include<iostream>
 using namespace std;
 
-int main(void)
+int main()
 {
 	cin.tie(NULL);
 	ios::sync_with_stdio(false);
 	
-	int testcase, a, b, num=1;
+	long long int testcase, a, b, num=1;
 
 	cin >> testcase;
 
@@ -16,13 +16,14 @@ int main(void)
 		cin >> a >> b;
 		for (int j = 0; j < b; j++)
 		{
-			num = (num*a) % 10;	
+			num *= a;
+			num = num % 10;
 		}
 		if (num == 0)
 			cout<<"10\n";
-		cout << num << "\n";
+		else
+			cout << num << "\n";
 	}
-	return 0;
 }
 
 
