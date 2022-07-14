@@ -1,32 +1,49 @@
 #include<iostream>
+#include <vector>
+#include <algorithm>
 using namespace std;
+int d(int x)
+{
+	int temp;
+	temp = x + x / 1000 + x % 1000 / 100 + x % 100 / 10 + x % 10;
+	return temp;
+}
 
-void dn(int* x);
 int main()
 {
 	cin.tie(nullptr);
 	ios::sync_with_stdio(false);
-	int n = 3;
-	
-	for (int n = 3; n <= 10000; n++)
+
+	vector <int> v;
+
+	for (int i = 1; i < 10001; i++)
 	{
-		dn(&n);
-		cout << n << "\n";
-	}
-}
-void dn(int *x)
-{
-	int sum = 0;
-	for (int i = 10; i < 10000; i *= 10)
-	{
-		sum += *x / i;
-		if (*x % i == 0)
-			break;
-	}
-	if (sum != *x + 1)
-	{
-		*x = sum;
-		return;
-	}
+		auto isself = find(v.begin(), v.end(), i);
 		
+		if(isself == v.end())
+			cout << i << "\n";
+
+		if (i <= 9)
+		{
+			v.push_back(d(i));
+		}
+		else if (i > 9)
+		{
+			v.push_back(d(i));
+		}
+		else if (i > 99)
+		{
+			v.push_back(d(i));
+		}
+		else if (i > 999)
+		{
+			v.push_back(d(i));
+		}
+		else if (i > 9999)
+		{
+			v.push_back(d(i));
+		}
+		
+	}
 }
+
