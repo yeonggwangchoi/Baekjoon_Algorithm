@@ -1,5 +1,4 @@
 #include<stdio.h>
-
 void hano(int x, int from, int mid, int to)
 {
 	if (x == 1)
@@ -15,8 +14,8 @@ void hano(int x, int from, int mid, int to)
 int main(void)
 {
 	int n;
-	scanf_s("%d", &n);
-	printf("%d\n", n * 2 + 1);
+	scanf("%d", &n);
+	printf("%d\n", (1<<n)-1);
 	hano(n,1,2,3);
 
 	return 0;
