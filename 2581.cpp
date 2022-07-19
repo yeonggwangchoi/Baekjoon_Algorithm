@@ -7,16 +7,33 @@ int main()
 
 	int M, N, a = 0, min=10000, sum = 0;
 	cin >> M >> N;
-
-	for (int i = M; i < N; i++)
+	for (int i = M; i <= N; i++)
 	{
-		for (int j = 2; j < N; j++)
+		if (i != 1)
 		{
-			if (i % j == 0)a++;
-			cout << a << endl;
+			for (int j = 2; j < i; j++)
+			{
+				if (i % j == 0)
+					a++;
+			}
+			if (a == 0)
+			{
+				if (min > i)
+				{
+					min = i;
+				}
+				sum += i;
+			}
 		}
-		if (a == 0) sum += i;
-		cout << sum << endl;
 		a = 0;
+	}
+	if (sum == 0)
+	{
+		cout << "-1\n";
+	}
+	else
+	{
+		cout << sum << "\n";
+		cout << min << "\n";
 	}
 }
