@@ -5,7 +5,7 @@ int main()
 	cin.tie(nullptr);
 	ios::sync_with_stdio(false);
 
-	int M, N, a = 0, min=10000, sum = 0;
+	int M, N, a = 0, min = 10000, sum = 0;
 	cin >> M >> N;
 	for (int i = M; i <= N; i++)
 	{
@@ -37,3 +37,4 @@ int main()
 		cout << min << "\n";
 	}
 }
+
