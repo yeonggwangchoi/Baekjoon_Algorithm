@@ -20,9 +20,10 @@ int main()
 		else
 		{
 			if (m.age > 17 || m.weight > 79)
-				cout << m.name << " senior\n";
+				cout << m.name << " Senior\n";
 			else
-				cout << m.name << " junior\n";
+				cout << m.name << " Junior\n";
 		}
 	}
 }
+
