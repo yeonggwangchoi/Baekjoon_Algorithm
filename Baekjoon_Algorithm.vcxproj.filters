@@ -459,10 +459,14 @@
     <ClCompile Include="2744.cpp">
       <Filter>소스 파일</Filter>
     </ClCompile>
+<<<<<<< HEAD
     <ClCompile Include="1380.cpp">
       <Filter>소스 파일</Filter>
     </ClCompile>
     <ClCompile Include="1475.cpp">
+=======
+    <ClCompile Include="23795.cpp">
+>>>>>>> 10e69f3cabd6f9fec78fe59856e363c3d2d44fba
       <Filter>소스 파일</Filter>
     </ClCompile>
   </ItemGroup>
