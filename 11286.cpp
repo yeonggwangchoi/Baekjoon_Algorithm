@@ -1,19 +1,29 @@
 #include <iostream>
 #include <queue>
+#include <cmath>
 using namespace std;
 
 class mycomparison
 {
-	bool reverse;
 public:
-	mycomparison(const bool& revparam = false)
-	{
-		reverse = revparam;
-	}
 	bool operator() (const int& lhs, const int& rhs) const
 	{
-		if (reverse) return (lhs > rhs);
-		else return (lhs < rhs);
+		if (abs(lhs) > abs(rhs))
+		{
+			return true;
+		}
+		else if (abs(lhs) == abs(rhs))
+		{
+			if (lhs > rhs) 
+			{
+				return true;
+			}
+			else
+			{
+				return false;
+			}
+		}
+		return false;
 	}
 };
 
@@ -26,29 +36,17 @@ int main()
 	{
 		int num;
 		cin >> num;
-		if (num > 0)
-		{
-			if (num == 0)
-			{
-				cout << pq.top() << "\n";
+		if (num == 0) {
+			if (pq.empty())
+				cout << "0\n";
+			else {
+				cout<<pq.top()<<"\n";
 				pq.pop();
-			}
-			else
-			{
-
 			}
 		}
 		else
 		{
-			if (num == 0)
-			{
-				cout << pq.top() << "\n";
-				pq.pop();
-			}
-			else
-			{
-
-			}
+			pq.push(num);
 		}
 	}
 }

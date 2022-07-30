@@ -8,7 +8,7 @@ int main()
 	int N;
 	cin >> N;
 	vector <int> v;
-	vector <int> vcount(N);
+
 	for (int i = 0; i < N; i++)
 	{
 		int num;

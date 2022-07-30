@@ -9,17 +9,10 @@ int main()
 	{
 		int k, n;
 		cin >> k >> n;
-		
-		int sum[15] = { 0 };
-		int num = 0;
-		for (int j = 0; j < k; j++)
+		int sum = 0;
+		for (int i = 0; i < n; i++)
 		{
-			for ( l = 1; l <= n; l++)
-			{
-				num += l;
-			}
+			
 		}
-
-		cout << sum[n] << "\n";
 	}
 }
