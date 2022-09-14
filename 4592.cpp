@@ -15,7 +15,7 @@ int main()
 			break;
 		vector<int> v;
 		for (int i = 0; i < n; i++) {
-			int num; 
+			int num;
 			cin >> num;
 			if (v.empty())
 				v.push_back(num);
@@ -23,7 +23,7 @@ int main()
 				v.push_back(num);
 			}
 		}
-		
+
 		for (auto i = v.begin(); i < v.end(); i++) {
 			cout << *i << " ";
 		}
