@@ -14,15 +14,15 @@ int main()
 		string str;
 		cin >> str;
 		v.push_back(str[0]);
-		if (4 < count(v.begin(), v.end(), v[i]) && find(v2.begin(), v2.end(),v2[v2.size() - 1]) == v2.end())
+		if (4 < count(v.begin(), v.end(),str[0]) && find(v2.begin(), v2.end(), str[0])==v2.end())
 		{
 			v2.push_back(v[i]);
 		}
 	}
-
+	sort(v2.begin(), v2.end());
 	if (v2.empty())
 		cout << "PREDAJA\n";
 	else
 		for (auto i : v2)
-			cout << v2[i] << "\n";
+			cout << i;
 }
