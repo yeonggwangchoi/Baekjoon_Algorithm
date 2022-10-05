@@ -1,2 +1,8 @@
-﻿  9076.cpp
-  Baekjoon_Algorithm.vcxproj -> D:\Baekjoon_Algorithm\x64\Debug\Baekjoon_Algorithm.exe
+﻿  11365.cpp
+D:\Baekjoon_Algorithm\11365.cpp(15,24): error C2664: 'std::basic_istream<char,std::char_traits<char>> &std::basic_istream<char,std::char_traits<char>>::getline(_Elem *,std::streamsize)': 인수 1을(를) 'std::string'에서 '_Elem *'(으)로 변환할 수 없습니다.
+          with
+          [
+              _Elem=char
+          ]
+D:\Baekjoon_Algorithm\11365.cpp(15,15): message : 이 변환을 수행할 수 있는 사용 가능한 사용자 정의 변환 연산자가 없거나 연산자를 호출할 수 없습니다.
+C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.30.30705\include\istream(440,39): message : 'std::basic_istream<char,std::char_traits<char>>::getline' 선언을 참조하십시오.
