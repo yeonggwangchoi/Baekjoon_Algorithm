@@ -209,6 +209,12 @@
     <ClCompile Include="2592.cpp" />
     <ClCompile Include="2711.cpp" />
     <ClCompile Include="2587.cpp" />
+<<<<<<< HEAD
+    <ClCompile Include="10987.cpp" />
+    <ClCompile Include="10821.cpp" />
+    <ClCompile Include="10991.cpp" />
+    <ClCompile Include="25640.cpp" />
+=======
     <ClCompile Include="11098.cpp" />
     <ClCompile Include="10178.cpp" />
     <ClCompile Include="9086.cpp" />
@@ -226,6 +232,10 @@
     <ClCompile Include="11365.cpp" />
     <ClCompile Include="1259.cpp" />
     <ClCompile Include="9654.cpp" />
+<<<<<<< HEAD
     <ClCompile Include="9325.cpp" />
+=======
+>>>>>>> 78df9a69cfdc1a2a798d139e73220630dea241da
+>>>>>>> 6907e7f4e0f7d3224d2787ae2d3384f4363a0bb8
   </ItemGroup>
 </Project>
