@@ -1,41 +1,43 @@
 #include <iostream>
-#include <cstdio>
-#include <vector>
+#include <string>
 using namespace std;
 
-int main()
+int main(void)
+
 {
-	cin.tie(nullptr);
-	cout.tie(nullptr);
-	ios::sync_with_stdio(false);
 
-	int T;
-	cin >> T;
+    cin.tie(nullptr);
+    cout.tie(nullptr);
+    ios::sync_with_stdio(false);
 
-	vector<double> num(T);
-	vector<string> str(5);
+    int T;
+    cin >> T;
 
-	for (int i = 0; i < T; i++) {
-		cin >> num[i];
-		cin >> str[i];
 
-		if (str[i] == "kg") {
-			num[i] = num[i] * 2.2046;
-			str[i] = "lb";
-		}
-		else if (str[i] == "l") {
-			num[i] = num[i] * 0.2642;
-			str[i] = "g";
-		}
-		else if (str[i] == "lb") {
-			num[i] = num[i] * 0.4536;
-			str[i] = "kg";
-		}
-		else if (str[i] == "g") {
-			num[i] = num[i] * 3.7854;
-			str[i] = "l";
-		}
-		printf("%.4f ", num[i]);
-		cout << str[i] << "\n";
-	}
+
+    for (int i = 0; i < T; i++){
+        pair<double, string> temp;
+
+        cin >> temp.first >> temp.second;
+
+        if (temp.second == "kg")
+
+            printf("%.4lf lb\n", temp.first * 2.2046);
+
+        else if (temp.second == "lb")
+
+            printf("%.4lf kg\n", temp.first * 0.4536);
+
+        else if (temp.second == "l")
+
+            printf("%.4lf g\n", temp.first * 0.2642);
+
+        else if (temp.second == "g")
+
+            printf("%.4lf l\n", temp.first * 3.7854);
+
+    }
+
+    return 0;
+
 }
