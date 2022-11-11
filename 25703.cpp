@@ -17,7 +17,7 @@ int main()
 	else {
 		cout << "int a;\n";
 		cout << "int *ptr = &a;\n";
-		cout << "int **ptr = &ptr;\n";
+		cout << "int **ptr2 = &ptr;\n";
 		for (int i = 0; i < N - 2; i++) {
 			cout << "int **";
 			for (int j = 0; j < i+1; j++) {
