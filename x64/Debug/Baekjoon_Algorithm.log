@@ -1,2 +1,19 @@
-﻿  25703.cpp
+﻿  25704.cpp
+D:\Baekjoon_Algorithm\25704.cpp(8,20): warning C4244: 'return': 'double'에서 'int'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+D:\Baekjoon_Algorithm\25704.cpp(9,23): warning C4244: 'return': 'double'에서 'int'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+D:\Baekjoon_Algorithm\25704.cpp(10,24): warning C4244: 'return': 'const _Ty'에서 'int'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+          with
+          [
+              _Ty=double
+          ]
+D:\Baekjoon_Algorithm\25704.cpp(11,24): warning C4244: 'return': '_Ty'에서 'int'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+          with
+          [
+              _Ty=double
+          ]
+D:\Baekjoon_Algorithm\25704.cpp(12,12): warning C4244: 'return': '_Ty'에서 'int'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+          with
+          [
+              _Ty=double
+          ]
   Baekjoon_Algorithm.vcxproj -> D:\Baekjoon_Algorithm\x64\Debug\Baekjoon_Algorithm.exe
