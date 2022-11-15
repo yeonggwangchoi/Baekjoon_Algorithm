@@ -1,31 +1,43 @@
 #include <iostream>
-
 using namespace std;
 
 int main()
 {
 	cin.tie(nullptr);
+	cout.tie(nullptr);
 	ios::sync_with_stdio(false);
 
-	int N;
-	cin >> N;
-	int num1,num2,num3,sum[3];
+	int n;
+	cin >> n;
+	int maxsum = -1;
+	for (int k = 0; k < n; k++) {
+		int num[3];
+		int sum = 0;
+		int max = 0;
+		cin >> num[0] >> num[1] >> num[2];
 
-	for (int i = 0; i < N; i++)
-	{
-		cin >> num1 >> num2 >> num3;
-		if (num1 == num2 && num2 == num3 && num1 == num3)
-			sum[i] = 10000 + num1 * 1000;
-		else if (num1 == num2 && num1 == num3)
-			sum[i] = 1000 + num1 * 100;
-		else if (num1 == num2 && num2 == num3)
-			sum[i] = 1000 + num2 * 100;
+		if (num[0] == num[1] && num[1] == num[2])
+			sum = 1000 * num[0] + 10000;
+		else if (num[0] != num[1] && num[1] != num[2] && num[2] != num[0])
+		{
+			for (int i = 0; i < 3; i++)
+			{
+				if (max < num[i])
+					max = num[i];
+			}
+			sum = max * 100;
+		}
 		else
 		{
-			if(num1>num2&&num2>num3)
-				sum[i] = num1 * 100;
-			else if()
+			if (num[0] == num[1])
+				sum = num[0] * 100 + 1000;
+			else if (num[1] == num[2])
+				sum = num[1] * 100 + 1000;
+			else
+				sum = num[0] * 100 + 1000;
 		}
-			
+		if (maxsum < sum)
+			maxsum = sum;
 	}
+	cout << maxsum;
 }
