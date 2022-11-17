@@ -1,39 +1,40 @@
 #include <iostream>
 using namespace std;
 
-bool d(char *x)
-{
-	int tmp[3] = { 0 };
-	if (x[1] == NULL)
-	{
-		for (int i = 0; i < 1; i++)
-		{
-			tmp[i] = x[i] - '0';
-		}
-	}
-	else if (x[2] == NULL)
-	{
-		for (int i = 0; i < 2; i++)
-		{
-			tmp[i] = x[i] - '0';
-		}
-	}
-	else if (x[3] == NULL)
-	{
-		for (int i = 0; i < 3; i++)
-		{
-			tmp[i] = x[i] - '0';
-		}
-	}
-}
+int hansu(int x);
 
 int main()
 {
-	int N;
-	cin >> N;
-	char str[5] = N;
-	for (int i = 0; i < N; i++)
-	{
-		d()
+	int num;
+	cin >> num;
+
+	int han = hansu(num);
+	
+	if (num == 1000)
+		han--;
+	
+	cout << han;
+}
+
+int hansu(int x) {
+	int res=0;
+	if (x < 99)
+		return x;
+	else {
+		for (int i = 100; i <= x; i++) {
+			int n = i;
+			int num[4];
+			int j = 0;
+			while (n!=0)
+			{
+				num[j] = n % 10;
+				n = n / 10;
+				j++;
+			}
+
+			if (num[1] - num[0] == num[2] - num[1])
+				res++;
+		}
+		return res + 99;
 	}
 }
