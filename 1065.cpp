@@ -1,10 +1,23 @@
 #include <iostream>
+#include <ctime>
 using namespace std;
 
 int hansu(int x);
 
 int main()
 {
+	/*속도*/
+	cin.tie(nullptr);
+	cout.tie(nullptr);
+	ios::sync_with_stdio(false);
+
+	time_t start, finish;
+	double duration;
+
+	start = time(NULL);
+	/*실행 시간을 측정하고 싶은 코드*/
+
+	
 	int num;
 	cin >> num;
 
@@ -14,6 +27,13 @@ int main()
 		han--;
 	
 	cout << han;
+
+	/*실행 시간을 측정하고 싶은 코드*/
+	finish = time(NULL);
+
+	duration = (double)(finish - start);
+	cout << duration << "ms" << endl;
+
 }
 
 int hansu(int x) {
