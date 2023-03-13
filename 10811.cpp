@@ -6,24 +6,23 @@ int main()
 {
 	int n, m;
 	cin >> n >> m;
-	vector<int> v(n + 1);
+	vector<int> v1(n + 1);
+	int num[101];
 	for (auto i = 1; i <= n; ++i)
-		v[i] = i;
-
-	for (auto t = 0; t < m; ++t) {
+		v1[i] = i;
+	for (auto t = 0; t < m; t++) {
 		int i, j;
 		cin >> i >> j;
-		
-		for (auto y = 0; y <= (j - i) / 2; ++y) {
-			int tmp;
-			tmp = v[i];
-			v[i] = v[j];
-			v[j] = tmp;
-			j--;
-			i++;
+		int u = j;
+		for (auto i = 1; i <= n; ++i)
+			num[i] = v1[i];
+
+		for (auto y = i; y <= j; y++) {
+			v1[y] = num[u];
+			u--;
 		}
 	}
 	
 	for (auto i = 1; i <= n; ++i)
-		cout << v[i] << " ";
+		cout << v1[i] << " ";
 }

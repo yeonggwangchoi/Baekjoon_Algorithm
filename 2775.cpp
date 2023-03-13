@@ -9,10 +9,18 @@ int main()
 	{
 		int k, n;
 		cin >> k >> n;
-		int sum = 0;
-		for (int i = 0; i < n; i++)
+		int sum = 1;
+		int ck = 0, cn = 1;
+		int j = 1;
+		while (ck != k)
 		{
-			
+			sum += j;
+			if (cn == n) {
+				cn = 1;
+				ck++;
+			}
+			cn++;
 		}
+		cout << sum;
 	}
 }
