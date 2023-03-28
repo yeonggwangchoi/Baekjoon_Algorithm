@@ -3,16 +3,31 @@ using namespace std;
 
 int main()
 {
-	int num1, num2, num3;
-	while (1)
+	while (true)
 	{
-		if (num1 == 0 && num2 == 0 && num3 == 0)
+		int num[3];
+
+		cin >> num[0] >> num[1] >> num[2];
+		if (num[0] == 0 && num[1] == 0 && num[2] == 0)
 			break;
 		else
-		{
-			if (num1 == num2 && num2 == num3 && num1 == num3)
-				cout << "Equilateral";
-
-		}
+			if (num[0] == num[1] && num[1] == num[2])
+				cout << "Equilateral" << endl;
+			else {
+				int max = -1;
+				for (auto i = 0; i < 3; i++) {
+					if (max < num[i])
+						max = num[i];
+				}
+				if (((num[0] + num[1] + num[2]) - max) > max)
+					if (num[0] == num[1] || num[1] == num[2] || num[2] == num[0])
+						cout << "Isosceles" << endl;
+					else {
+						cout << "Scalene" << endl;
+					}
+				else
+					cout << "Invalid" << endl;
+				
+			}
 	}
 }
