@@ -6,28 +6,27 @@ int main()
 {
 	int T;
 	cin >> T;
-
-	for (auto i = 0; i < T; i++) {
-		stack<char> s1;
-		stack<char> s2;
+	
+	for (auto i = 0; i < T; ++i) {
+		int n = 0;
 		string str;
 		cin >> str;
-		
-		sort(str.begin(), str.end());
-
-		for (auto j = str.begin(); j < str.end(); j++) {
-			s1.push(*j);
-		}
-		for (int j = 0; j < s1.size(); j++) {
-			if (s1.top() == ')') {
-				s2.push(')');
-				s1.pop();
+		stack<char> st;
+		for (auto j = str.begin(); j < str.end(); ++j) {
+			if (*j == '(') {
+				st.push(*j);
 			}
 			else {
-
+				if (!st.empty())
+					st.pop();
+				else {
+					n = 1;
+				}
 			}
 		}
-
-		
+		if(st.empty() && n == 0)
+			cout << "YES" << endl;
+		else
+			cout << "NO" << endl;
 	}
 }
